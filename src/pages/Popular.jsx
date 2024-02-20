@@ -16,7 +16,7 @@ export default function Popular() {
     }, [])
   return (
     <div>
-        {stocks.length > 0 ? <StockTable stocks={stocks} /> : <Loading />}
+        {stocks.length > 0 ? <StockTable stocks={stocks} title="Today's Most Traded" /> : <Loading />}
     </div>
   )
 }

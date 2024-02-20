@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function StockTable({ stocks }) {
+export default function StockTable({ stocks, title }) {
     const [localStocks, setLocalStocks] = useState([]);
     const [sortedByName, setSortedByName] = useState(false);
     const [sortedByPrice, setSortedByPrice] = useState(false);
@@ -61,21 +61,24 @@ export default function StockTable({ stocks }) {
 
     return (
         <div className="overflow-x-auto p-20">
+            <div className="w-full text-xl text-center text-gray-400 bg-gray-800">
+                {title}
+            </div>
             <table className="rounded-lg w-full text-sm text-left text-gray-400">
                 <thead className="text-xs text-gray-400 uppercase bg-gray-800">
                     <tr>
                         <th scope="col" className="px-6 py-3">Symbol</th>
                         <th scope="col" onClick={sortStocksByName} className="px-6 py-3 underline cursor-pointer">Name</th>
                         <th scope="col" onClick={sortStocksByPrice} className="px-6 py-3 underline cursor-pointer">Price</th>
-                        <th scope="col" onClick={sortStocksByPercent} className="px-6 py-3 underline cursor-pointer">Change(%)</th>
+                        <th scope="col" onClick={sortStocksByPercent} className="px-6 py-3 underline cursor-pointer">Day Change</th>
                     </tr>
                 </thead>
                 <tbody>
                     {localStocks.map(stock => (
                         <tr className="bg-gray-700 border-b border-gray-800" key={stock.symbol}>
                             <td className="px-6 py-4">
-                                <img className="rounded-lg" src={stock.logo} alt="" style={{ display: 'inline-block', marginRight: '8px', verticalAlign: 'middle' }} />
-                                {stock.symbol}
+                            <img className="rounded-lg h-6" src={stock.logo ? stock.logo : "https://static.thenounproject.com/png/2181345-200.png"} alt="" style={{ display: 'inline-block', marginRight: '8px', verticalAlign: 'middle' }} />
+                            <span className="p-1 bg-gray-800 text-white bold-lg rounded-lg">{stock.symbol}</span>
                             </td>
                             <td className="px-6 py-4 underline">
                                 <a href={stock.href}>{stock.name}</a>
