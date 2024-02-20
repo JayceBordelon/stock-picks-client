@@ -3,6 +3,6 @@ import Loading from '../components/Loading'
 
 export default function Saved() {
   return (
-    <Loading />
+    <Loading message="Still Building" />
   )
 }

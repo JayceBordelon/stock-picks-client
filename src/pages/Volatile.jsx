@@ -16,7 +16,7 @@ export default function Volatile() {
     }, [])
   return (
     <div>
-        {stocks.length > 0 ? <StockTable stocks={stocks} title="Today's Most Volatile" /> : <Loading />}
+        {stocks.length > 0 ? <StockTable stocks={stocks} title="Today's Most Volatile" /> : <Loading message="Fetching Volatile Stock Data" />}
     </div>
   )
 }
