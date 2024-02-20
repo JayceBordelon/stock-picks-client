@@ -43,6 +43,7 @@ export default function NavBar() {
                     <a className="flex items-center py-4 px-2">
                         <img src="https://www.svgrepo.com/show/59584/bull-silhouette.svg" className="rounded-lg h-10 mr-2" alt="logo" />
                         <span className="font-semibold text-white text-lg">B&B</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Silhouette_of_a_Bear.svg" className="rounded-lg h-7 ml-2" alt="logo" />
                     </a>
                     <div className="md:hidden">
                         <button onClick={toggleMobileMenu} className="text-gray-500 font-semibold hover:text-white transition duration-300">
