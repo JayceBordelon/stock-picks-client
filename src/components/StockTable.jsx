@@ -60,7 +60,7 @@ export default function StockTable({ stocks, title }) {
     };
 
     return (
-        <div className="overflow-x-auto p-20">
+        <div className="overflow-x-auto pt-20 sm:p-20 max-w-screen">
             <div className="w-full text-xl text-center text-gray-400 bg-gray-800">
                 {title}
             </div>
@@ -69,7 +69,7 @@ export default function StockTable({ stocks, title }) {
                     <tr>
                         <th scope="col" className="px-6 py-3">Symbol</th>
                         <th scope="col" onClick={sortStocksByName} className="px-6 py-3 underline cursor-pointer">Name</th>
-                        <th scope="col" onClick={sortStocksByPrice} className="px-6 py-3 underline cursor-pointer">Price</th>
+                        <th scope="col" onClick={sortStocksByPrice} className="hidden md:table-cell px-6 py-3 underline cursor-pointer">Price</th>
                         <th scope="col" onClick={sortStocksByPercent} className="px-6 py-3 underline cursor-pointer">Day Change</th>
                     </tr>
                 </thead>
@@ -83,7 +83,7 @@ export default function StockTable({ stocks, title }) {
                             <td className="px-6 py-4 underline">
                                 <a href={stock.href}>{stock.name}</a>
                             </td>
-                            <td className={`px-6 py-4 ${stock.percentChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
+                            <td className={`hidden md:table-cell px-6 py-4 ${stock.percentChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
                                 {stock.price}
                             </td>
                             <td className={`px-6 py-4 ${stock.percentChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>

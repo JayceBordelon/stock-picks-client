@@ -63,10 +63,10 @@ export default function NavBar() {
                     </div>
                 </div>
                 {isMobileMenuOpen && (
-                    <div className="md:hidden bg-gray-700">
-                        <Link to="/volatile" className="block py-2 px-4 text-sm text-gray-500 hover:text-green-500">Volatile</Link>
-                        <Link to="/popular" className="block py-2 px-4 text-sm text-gray-500 hover:text-green-500">Popular</Link>
-                        {/* <Link to="/saved" className="block py-2 px-4 text-sm text-gray-500 hover:text-green-500">Saved</Link> */}
+                    <div className="md:hidden bg-gray-700 mb-2">
+                        <Link to="/volatile" className="block py-2 text-center text-sm text-gray-200 hover:text-green-500 border-b-4 border-gray-500">Volatile 🤯</Link>
+                        <Link to="/popular" className="block py-2 text-center text-sm text-gray-200 hover:text-green-500 border-b-4 border-gray-500">Popular 💕</Link>
+                        {/* <Link to="/saved" className="block py-2 text-center text-sm text-gray-500 hover:text-green-500">Saved</Link> */}
                     </div>
                 )}
             </div>
