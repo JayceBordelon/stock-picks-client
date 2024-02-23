@@ -57,15 +57,15 @@ export default function NavBar() {
                         </button>
                     </div>
                     <div className={`md:flex hidden items-center space-x-1 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
-                        <Link to="/volatile" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Volatile</Link>
-                        <Link to="/popular" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Popular</Link>
+                        <Link to="/volatile" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Volatile Picks</Link>
+                        <Link to="/popular" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Popular Picks</Link>
                         {/* <Link to="/saved" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Saved</Link> */}
                     </div>
                 </div>
                 {isMobileMenuOpen && (
                     <div className="md:hidden bg-gray-700 mb-2">
-                        <Link to="/volatile" className="block py-2 text-center text-sm text-gray-200 hover:text-green-500 border-b-4 border-gray-500">Volatile 🤯</Link>
-                        <Link to="/popular" className="block py-2 text-center text-sm text-gray-200 hover:text-green-500 border-b-4 border-gray-500">Popular 💕</Link>
+                        <Link to="/volatile" onClick={() => setIsMobileMenuOpen()} className="block py-2 text-center text-sm text-gray-200 hover:text-green-500 border-b-4 border-gray-500">Volatile Picks</Link>
+                        <Link to="/popular" onClick={() => setIsMobileMenuOpen()} className="block py-2 text-center text-sm text-gray-200 hover:text-green-500 border-b-4 border-gray-500">Popular Picks</Link>
                         {/* <Link to="/saved" className="block py-2 text-center text-sm text-gray-500 hover:text-green-500">Saved</Link> */}
                     </div>
                 )}

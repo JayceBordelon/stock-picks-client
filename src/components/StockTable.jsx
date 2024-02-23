@@ -77,8 +77,8 @@ export default function StockTable({ stocks, title }) {
                     {localStocks.map(stock => (
                         <tr className="bg-gray-700 border-b border-gray-800" key={stock.symbol}>
                             <td className="px-6 py-4">
-                            <img className="rounded-lg h-6" src={stock.logo ? stock.logo : "https://static.thenounproject.com/png/2181345-200.png"} alt="" style={{ display: 'inline-block', marginRight: '8px', verticalAlign: 'middle' }} />
-                            <span className="p-1 bg-gray-800 text-white bold-lg rounded-lg">{stock.symbol}</span>
+                                <img className="rounded-lg h-6" src={stock.logo ? stock.logo : "https://static.thenounproject.com/png/2181345-200.png"} alt="" style={{ display: 'inline-block', marginRight: '8px', verticalAlign: 'middle' }} />
+                                <span className="p-1 bg-gray-800 text-white bold-lg rounded-lg">{stock.symbol}</span>
                             </td>
                             <td className="px-6 py-4 underline">
                                 <a href={stock.href}>{stock.name}</a>
