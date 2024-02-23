@@ -6,8 +6,8 @@ import Loading from './Loading';
 
 const AuthBranding = () => {
     return (
-        <div className="flex justify-center items-center py-4">
-            <div className="flex items-center bg-gray-800 p-2 rounded-lg">
+        <div className="flex justify-center items-center">
+            <div className="flex items-center rounded-lg">
                 {/* Scale the bear logo larger on md screens and above */}
                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Silhouette_of_a_Bear.svg" className="rounded-lg h-6 md:h-12 scale-x-[-1]" alt="bear logo" />
                 {/* Increase font size and margins on md screens and above */}
@@ -62,7 +62,7 @@ export function RegisterForm({ setAuthFormRendered }) {
 
 
     return loading ? (<Loading message={loading} />) : (
-        <div className="overflow-x-auto pt-20 sm:p-20 max-w-screen relative z-10">
+        <div className="overflow-x-auto sm:p-20 max-w-screen relative z-10">
             <form onSubmit={handleSubmit} className="w-5/6 max-w-xl mx-auto bg-gray-800 p-8 rounded-lg">
                 {AuthBranding()}
                 <h2 className="text-center font-semibold text-white text-lg md:text-2xl mb-8">Register</h2>
@@ -128,7 +128,7 @@ export function LoginForm({ setAuthFormRendered }) {
     };
 
     return loading ? (<Loading message={loading} />) : (
-        <div className="overflow-x-auto pt-20 sm:p-20 max-w-screen relative z-10">
+        <div className="overflow-x-auto sm:p-20 max-w-screen relative z-10">
             <form onSubmit={handleSubmit} className="w-5/6 max-w-xl mx-auto bg-gray-800 p-8 rounded-lg">
                 {AuthBranding()}
                 <h2 className="text-center font-semibold text-white text-lg md:text-2xl mb-8">Login</h2>
